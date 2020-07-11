@@ -2,10 +2,15 @@ var submitBtn = document.getElementById("submit");
 var eanInput = document.getElementById("ean-input");
 var barcodeOut = document.getElementById("barcode1");
 
-var value = parseInt(eanInput.value);
+eanInput.onkeyup  = function createEan(){
+        
+    JsBarcode("#barcode1", parseInt(eanInput.value));
+    document.getElementById("ean-input").submit();
 
-submitBtn.onclick = function(){
-    
-    JsBarcode("#barcode1", "1234567890128");
-    document.barcodeOut.reset();
 }
+
+
+
+
+
+0190199221147
