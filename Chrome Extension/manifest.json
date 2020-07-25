@@ -6,6 +6,7 @@
   "description": "EAN generator for elkjop",
  
   "content_scripts": [{
+    "run_at": "document_idle",
     "css": ["test.css"],
     "js": [ "JsBarcode.all.min.js", "test.js"],
     "matches": ["https://www.elkjop.no/*"]
